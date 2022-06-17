@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface Api {
 
-    @GET("users")
+    @GET("entries")
     fun getUsers():Call<UserResponse>
 
 }

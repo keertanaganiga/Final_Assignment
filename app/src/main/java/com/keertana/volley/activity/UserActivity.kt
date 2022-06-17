@@ -29,7 +29,7 @@ class UserActivity : AppCompatActivity() {
         RetrofitClient.instance.getUsers().enqueue(object :Callback<UserResponse>{
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 tvResponseCode.text=response.code().toString()
-                val listResponse=response.body()?.data
+                val listResponse=response.body()?.entries
                 listResponse?.let { list.addAll(it) }
                 val adapter=UserAdapter(list)
                 rvUser.adapter=adapter

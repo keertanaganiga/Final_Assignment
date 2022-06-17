@@ -12,10 +12,10 @@ class UserAdapter (private val list:ArrayList<User>):RecyclerView.Adapter<UserAd
     inner class UserViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         fun bind(user:User){
             with(itemView){
-                val text="id:${user.id}\n"+
-                        "email:${user.email}\n"+
-                        "first name:${user.firstName}\n"+
-                        "last name:${user.lastName}\n"
+                val text="API:${user.API}\n"+
+                        "Description:${user.Description}\n"+
+                        "Category:${user.Category}\n"
+
                 tvResponse.text=text
             }
 
